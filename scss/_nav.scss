@@ -1,0 +1,96 @@
+// the nav is set as flex so that we can style the menu bar
+// The nav-overlay has to be position absolute otherwise it
+// will mess up the nav flex container by adding another
+// container that we don't want (the overlay)
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: $secondary-background;
+
+  h1 {
+    color: $container-background;
+  }
+}
+
+#menu-toggle {
+  display: none;
+}
+
+// important part of the menu is that there has to be some sort of overlay for
+// the menu to be contained inside of, otherwise it will cause all kinds of
+// problems with the page scrolling and resizing.
+// Just set the height and width to auto on larger screens and it shouldn't make
+// a difference.
+
+.nav-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hamburger-button {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 500;
+  transition: transform 90ms linear;
+
+  span {
+    height: 5px;
+    width: 2rem;
+    background-color: $secondary-text;
+    border-radius: 5px;
+  }
+}
+
+// main-menu-items is the list of menu items
+.main-menu-items {
+  width: 100%;
+  height: 100%;
+  pointer-events: all;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  background-color: $secondary-background;
+
+  list-style-type: none;
+
+  transform: translateX(150%);
+  transition: transform 500ms linear;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 5rem;
+
+  li {
+    a {
+      color: $primary-background;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      &:visited {
+        color: $primary-background;
+      }
+    }
+  }
+}
+
+#menu-toggle:checked ~ .nav-overlay .main-menu-items {
+  transform: translateX(0);
+}
+
+#menu-toggle:checked {
+  + .hamburger-button {
+    transform: rotate(90deg);
+  }
+}

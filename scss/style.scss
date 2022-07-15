@@ -13,6 +13,7 @@ $default-font-family: "Open Sans", sans-serif;
 $border-radius-size: 5px;
 
 @import "_utils.scss";
+@import "_nav.scss";
 
 * {
   box-sizing: border-box;
@@ -22,6 +23,7 @@ $border-radius-size: 5px;
 
 body {
   background-color: $primary-background;
+  overflow-x: hidden;
   font : {
     family: $default-font-family;
     size: $default-font-size;
