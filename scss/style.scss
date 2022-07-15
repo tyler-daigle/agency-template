@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
+
+$primary-background: #434343;
+$secondary-background: #f0eded;
+$primary-text: #d5d2d2;
+$secondary-text: #038fae;
+$header-color: #038fae;
+$container-background: #626262;
+$form-background: #2e2d2d;
+$spacing: 1rem;
+$default-font-size: 16px;
+$default-font-family: "Open Sans", sans-serif;
+$border-radius-size: 5px;
+
+@import "_utils.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $primary-background;
+  font : {
+    family: $default-font-family;
+    size: $default-font-size;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $primary-text;
+}
+
+p {
+  color: $primary-text;
+  font-size: 0.8rem;
+}
+.container {
+  margin: $spacing;
+}
+
+.header-with-icon {
+  display: flex;
+  align-items: center;
+  gap: $spacing;
+  img {
+    box-sizing: initial;
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    border-radius: $border-radius-size;
+    border: solid 1px $primary-text;
+  }
+}
