@@ -14,6 +14,8 @@ $border-radius-size: 5px;
 
 @import "_utils.scss";
 @import "_nav.scss";
+@import "_gallery.scss";
+@import "_form.scss";
 
 * {
   box-sizing: border-box;
@@ -23,9 +25,8 @@ $border-radius-size: 5px;
 
 body {
   background-color: $primary-background;
-  color: $priamry-text;
+  color: $primary-text;
 
-  overflow-x: hidden;
   font : {
     family: $default-font-family;
     size: $default-font-size;
@@ -36,16 +37,70 @@ p {
   font-size: 0.8rem;
 }
 
-.header-with-icon {
+#main-menu {
+  background-color: $secondary-background;
+  padding: 0.5rem;
+}
+
+#main-menu h1 {
+  font-weight: normal;
+  color: $container-background;
+}
+
+.hero-section {
+  height: 650px;
+  background-color: lightyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("/images/people-meeting-mobile-bw.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: $spacing * 2;
+
+  a {
+    font-weight: bold;
+    color: $primary-text;
+    text-decoration: none;
+    border: solid 1px $primary-text;
+    padding: 0.5rem;
+    margin-top: $spacing;
+    display: inline-block;
+    border-radius: $border-radius-size;
+    &:visited {
+      color: inherit;
+    }
+  }
+}
+
+// headings for all the sections should be centered
+section > h2 {
+  text-align: center;
+}
+
+// generic container
+.container {
+  margin: $spacing * 2 $spacing;
+}
+
+.container-filled {
+  padding: $spacing * 2 $spacing;
+  background-color: $container-background;
+}
+
+// the image and the h3 tag make up the header
+.container-header {
   display: flex;
   align-items: center;
   gap: $spacing;
-  img {
-    box-sizing: initial;
-    height: 30px;
-    width: 30px;
-    padding: 10px;
-    border-radius: $border-radius-size;
-    border: solid 1px $primary-text;
-  }
+  margin-bottom: $spacing;
+}
+// image that appears next to the titles
+.header-image {
+  border: solid 1px $primary-text;
+  width: 50px;
+  height: auto;
+  padding: 10px;
+  border-radius: $border-radius-size;
 }

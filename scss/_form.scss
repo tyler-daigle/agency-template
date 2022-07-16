@@ -1,0 +1,52 @@
+.form-container {
+  background-color: $form-background;
+  padding-top: $spacing * 2;
+  h2 {
+    text-align: center;
+    margin-bottom: $spacing * 2;
+  }
+  form {
+    margin-bottom: calc($spacing * 2);
+
+    input,
+    textarea,
+    button {
+      font-family: inherit;
+    }
+
+    input,
+    textarea {
+      background-color: $form-background;
+      border: solid 1px $secondary-text;
+      border-radius: $border-radius-size;
+      padding: 8px;
+      margin-bottom: calc($spacing / 2);
+      color: $primary-text;
+    }
+
+    label {
+      font-size: 0.8rem;
+      color: darken($primary-text, 10%);
+    }
+
+    button {
+      border: none;
+      background-color: $secondary-text;
+      color: $primary-text;
+      font-weight: bold;
+      border-radius: $border-radius-size;
+      padding: 0.75rem;
+      // remember flex items default to flex-stretch so the button will
+      // be stretched to 100% width
+      // use align-self: flex-start; on desktop version
+    }
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: calc($spacing / 2);
+  margin: 0 $spacing;
+}

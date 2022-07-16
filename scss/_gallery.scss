@@ -1,0 +1,24 @@
+.team-gallery {
+  display: flex;
+  gap: $spacing;
+  margin: $spacing * 2 0;
+  overflow-x: scroll;
+  padding: $spacing;
+}
+
+.member-info {
+  background-color: $container-background;
+  border-radius: $border-radius-size;
+  padding-bottom: $spacing;
+  span {
+    display: block;
+    margin: $spacing/2 $spacing;
+  }
+  p {
+    margin: $spacing/2 $spacing;
+  }
+  img {
+    height: 150px;
+    width: 150px;
+  }
+}
