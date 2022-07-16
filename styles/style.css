@@ -149,6 +149,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 2rem;
+  padding: 1rem;
 }
 .hero-section a {
   font-weight: bold;
