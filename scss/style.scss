@@ -23,6 +23,8 @@ $border-radius-size: 5px;
 
 body {
   background-color: $primary-background;
+  color: $priamry-text;
+
   overflow-x: hidden;
   font : {
     family: $default-font-family;
@@ -30,21 +32,8 @@ body {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $primary-text;
-}
-
 p {
-  color: $primary-text;
   font-size: 0.8rem;
-}
-.container {
-  margin: $spacing;
 }
 
 .header-with-icon {
@@ -59,31 +48,4 @@ p {
     border-radius: $border-radius-size;
     border: solid 1px $primary-text;
   }
-}
-
-// since the navbar is fixed in mobile, we have to adjust for the navbar or else
-// items will be hidden under the navbar.
-.main-header {
-  padding: 2rem;
-  height: 650px;
-  width: auto;
-
-  background-image: url("/images/people-meeting-mobile-bw.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: $spacing;
-  flex-grow: 0;
-}
-
-.button-outline {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border: solid 1px white;
-  padding: 10px 20px;
-  border-radius: $border-radius-size;
 }
