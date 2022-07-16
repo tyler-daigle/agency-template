@@ -24,13 +24,18 @@
   font-size: 2.25rem;
 }
 
-nav {
+.nav-container {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
   background-color: #f0eded;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 2px 2px 15px #333;
 }
-nav h1 {
+.nav-container h1 {
   color: #626262;
 }
 
@@ -98,6 +103,18 @@ nav h1 {
   transform: rotate(90deg);
 }
 
+@media screen and (min-width: 800px) {
+  .nav-overlay {
+    position: relative;
+  }
+  .hamburger-button {
+    display: none;
+  }
+  .main-menu-items {
+    position: relative;
+    display: block;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -141,4 +158,27 @@ p {
   padding: 10px;
   border-radius: 5px;
   border: solid 1px #d5d2d2;
+}
+
+.main-header {
+  padding: 2rem;
+  height: 650px;
+  width: auto;
+  background-image: url("/images/people-meeting-mobile-bw.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  flex-grow: 0;
+}
+
+.button-outline {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: solid 1px white;
+  padding: 10px 20px;
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */

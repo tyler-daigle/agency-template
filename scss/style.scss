@@ -60,3 +60,30 @@ p {
     border: solid 1px $primary-text;
   }
 }
+
+// since the navbar is fixed in mobile, we have to adjust for the navbar or else
+// items will be hidden under the navbar.
+.main-header {
+  padding: 2rem;
+  height: 650px;
+  width: auto;
+
+  background-image: url("/images/people-meeting-mobile-bw.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: $spacing;
+  flex-grow: 0;
+}
+
+.button-outline {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: solid 1px white;
+  padding: 10px 20px;
+  border-radius: $border-radius-size;
+}

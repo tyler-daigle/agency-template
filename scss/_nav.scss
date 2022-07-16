@@ -3,12 +3,17 @@
 // will mess up the nav flex container by adding another
 // container that we don't want (the overlay)
 
-nav {
+.nav-container {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
   background-color: $secondary-background;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 
+  box-shadow: 2px 2px 15px #333;
   h1 {
     color: $container-background;
   }
@@ -92,5 +97,20 @@ nav {
 #menu-toggle:checked {
   + .hamburger-button {
     transform: rotate(90deg);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .nav-overlay {
+    position: relative;
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+
+  .main-menu-items {
+    position: relative;
+    display: block;
   }
 }
