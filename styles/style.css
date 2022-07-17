@@ -140,16 +140,21 @@ p {
 }
 
 .hero-section {
-  height: 650px;
-  background-color: lightyellow;
+  height: 630px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/images/people-meeting-mobile-bw.jpg");
+  background-image: url("/images/people-meeting-mobile-bw-darker.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 2rem;
-  padding: 1rem;
+}
+.hero-section div {
+  padding: 50% 1rem;
+  background-color: rgba(46, 46, 46, 0.6);
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
 }
 .hero-section a {
   font-weight: bold;
@@ -169,8 +174,11 @@ section > h2 {
   text-align: center;
 }
 
-.container {
+.container, .address-container {
   margin: 2rem 1rem;
+}
+.container p, .address-container p {
+  line-height: 1.6rem;
 }
 
 .container-filled {
@@ -188,7 +196,40 @@ section > h2 {
 .header-image {
   border: solid 1px #d5d2d2;
   width: 50px;
-  height: auto;
+  height: 50px;
   padding: 10px;
   border-radius: 5px;
+}
+
+.address-container {
+  border-bottom: solid 1px #434343;
+  margin-bottom: 0;
+}
+
+.address-details {
+  margin: 1rem 0;
+}
+
+address a,
+address p {
+  color: #d5d2d2;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 2rem;
+  background-color: #2e2d2d;
+  padding-bottom: 2rem;
+}
+
+footer {
+  text-align: center;
+  margin: 1rem;
+}
+footer p {
+  font-style: italic;
 }/*# sourceMappingURL=style.css.map */
