@@ -5,7 +5,6 @@
 
 #menu-toggle {
   z-index: 6;
-
   position: fixed;
   top: 20px;
   left: 90%;
@@ -37,7 +36,7 @@ nav ul {
   top: 0;
   left: 1500px;
 
-  padding-top: calc($spacing * 2);
+  padding-top: calc($spacing * 4);
 
   transition: left 300ms ease-in;
   li {
@@ -46,6 +45,7 @@ nav ul {
     a {
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.25rem;
       color: black;
       &:visited {
         color: black;

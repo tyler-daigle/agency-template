@@ -60,7 +60,7 @@ nav ul {
   position: absolute;
   top: 0;
   left: 1500px;
-  padding-top: 2rem;
+  padding-top: 4rem;
   transition: left 300ms ease-in;
 }
 nav ul li {
@@ -70,6 +70,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.25rem;
   color: black;
 }
 nav ul li a:visited {
