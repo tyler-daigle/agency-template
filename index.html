@@ -10,26 +10,28 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/nav.js" defer></script>
   </head>
   <body>
     <header>
       <div id="main-menu">
         <h1>Awesome</h1>
+        <div id="menu-toggle"><span></span><span></span><span></span></div>
         <nav>
-          <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">TEAM</a></li>
-            <li><a href="#">SERVICES</a></li>
+          <ul id="main-menu-list">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#team">TEAM</a></li>
+            <li><a href="#services">SERVICES</a></li>
             <li><a href="#">PORTFOLIO</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <!-- Hero Section with big image inside -->
-    <section>
+    <section id="home">
       <div class="hero-section">
         <div>
           <p class="font-xl">
@@ -44,7 +46,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="about">
       <h2>WE ARE <span class="secondary-text">AWESOME</span></h2>
 
       <div class="container">
@@ -100,7 +102,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="team">
       <h2><span class="secondary-text">AWESOME</span> TEAM</h2>
 
       <div class="team-gallery">
@@ -159,7 +161,7 @@
     </section>
 
     <!-- Things the company does... -->
-    <section>
+    <section id="services">
       <h2>OUR <span class="secondary-text">AWESOME</span> THINGS</h2>
 
       <div class="container">
@@ -209,7 +211,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="contact">
       <div class="form-container">
         <h2>CONTACT <span class="secondary-text">AWESOME</span></h2>
         <form class="contact-form">

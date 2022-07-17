@@ -24,10 +24,44 @@
   font-size: 2.25rem;
 }
 
+#main-menu {
+  position: fixed;
+  width: 100%;
+}
+
+#menu-toggle {
+  z-index: 6;
+  position: fixed;
+  top: 20px;
+  left: 90%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: transform 300ms linear;
+}
+#menu-toggle span {
+  background-color: #038fae;
+  height: 4px;
+  width: 1.5rem;
+  display: block;
+}
+
+.toggled {
+  transform: rotate(-90deg);
+}
+
 nav ul {
+  background-color: #f0eded;
   list-style-type: none;
   height: 100vh;
-  display: none;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 1500px;
+  padding-top: 2rem;
+  transition: left 300ms ease-in;
 }
 nav ul li {
   text-align: center;
@@ -40,6 +74,10 @@ nav ul li a {
 }
 nav ul li a:visited {
   color: black;
+}
+
+.slide-in-menu {
+  left: 0;
 }
 
 .team-gallery {
