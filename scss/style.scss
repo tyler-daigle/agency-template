@@ -12,6 +12,8 @@ $default-font-size: 16px;
 $default-font-family: "Open Sans", sans-serif;
 $border-radius-size: 5px;
 
+$desktop_breakpoint: 900px;
+
 @import "_utils.scss";
 @import "_nav.scss";
 @import "_gallery.scss";

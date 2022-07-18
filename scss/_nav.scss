@@ -1,6 +1,20 @@
+// #main-menu is the container div around the entire top section which
+// contains the <h1>, the menu toggle and the actual nav list.
 #main-menu {
   position: fixed;
   width: 100%;
+
+  @media screen and (min-width: $desktop_breakpoint) {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border: dashed 1px red;
+    h1 {
+      margin: 0;
+      border: solid 1px green;
+    }
+  }
 }
 
 #menu-toggle {
@@ -20,8 +34,12 @@
     width: 1.5rem;
     display: block;
   }
-  // display: none;
+
+  @media (min-width: $desktop_breakpoint) {
+    display: none;
+  }
 }
+
 .toggled {
   transform: rotate(-90deg);
 }
@@ -37,8 +55,8 @@ nav ul {
   left: 1500px;
 
   padding-top: calc($spacing * 4);
-
   transition: left 300ms ease-in;
+
   li {
     text-align: center;
     margin-bottom: $spacing;
@@ -49,6 +67,26 @@ nav ul {
       color: black;
       &:visited {
         color: black;
+      }
+    }
+  }
+
+  @media screen and (min-width: $desktop_breakpoint) {
+    height: auto;
+    width: auto;
+    position: relative;
+    top: auto;
+    left: auto;
+
+    padding: 0;
+    display: flex;
+    align-items: center;
+    li {
+      text-align: left;
+      border: solid 1px green;
+      margin: 0;
+      a {
+        font-size: 1rem;
       }
     }
   }
