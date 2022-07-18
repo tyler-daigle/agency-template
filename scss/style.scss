@@ -98,6 +98,16 @@ section > h2 {
   }
 }
 
+.main-container {
+  @media screen and (min-width: $desktop_breakpoint) {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing;
+    .container {
+      flex: 1;
+    }
+  }
+}
 .container-filled {
   padding: $spacing * 2 $spacing;
   background-color: $container-background;

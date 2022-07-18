@@ -276,6 +276,17 @@ section > h2 {
   line-height: 1.6rem;
 }
 
+@media screen and (min-width: 900px) {
+  .main-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .main-container .container, .main-container .address-container {
+    flex: 1;
+  }
+}
+
 .container-filled {
   padding: 2rem 1rem;
   background-color: #626262;
