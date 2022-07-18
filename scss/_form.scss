@@ -41,8 +41,26 @@
       // use align-self: flex-start; on desktop version
     }
   }
+  @media screen and (min-width: $desktop-breakpoint) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: calc($spacing * 2) auto;
+    width: 50%;
+    gap: calc($spacing * 4);
+    > div,
+    > form {
+      flex: 1;
+      margin: 0;
+    }
+  }
 }
 
+section#contact {
+  background-color: $form-background;
+  @media screen and (min-width: $desktop-breakpoint) {
+  }
+}
 .contact-form {
   display: flex;
   flex-direction: column;

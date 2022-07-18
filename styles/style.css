@@ -142,11 +142,19 @@ nav ul li a.current-page {
   overflow-x: scroll;
   padding: 1rem;
 }
+@media screen and (min-width: 900px) {
+  .team-gallery {
+    justify-content: center;
+    gap: 4rem;
+    overflow-x: auto;
+  }
+}
 
 .member-info {
   background-color: #626262;
   border-radius: 5px;
   padding-bottom: 1rem;
+  width: 150px;
 }
 .member-info span {
   display: block;
@@ -197,7 +205,25 @@ nav ul li a.current-page {
   border-radius: 5px;
   padding: 0.75rem;
 }
+@media screen and (min-width: 900px) {
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2rem auto;
+    width: 50%;
+    gap: 4rem;
+  }
+  .form-container > div,
+.form-container > form {
+    flex: 1;
+    margin: 0;
+  }
+}
 
+section#contact {
+  background-color: #2e2d2d;
+}
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -259,7 +285,7 @@ p {
   .hero-section {
     background-image: url("/images/people-meeting-large-bw.jpg");
     background-size: cover;
-    background-position: bottom right;
+    background-position: center left;
     justify-content: flex-end;
     padding-right: 10%;
   }
@@ -269,10 +295,10 @@ section > h2 {
   text-align: center;
 }
 
-.container, .address-container {
+.container, .address-container, .container-filled {
   margin: 2rem 1rem;
 }
-.container p, .address-container p {
+.container p, .address-container p, .container-filled p {
   line-height: 1.6rem;
 }
 
@@ -281,8 +307,11 @@ section > h2 {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
+    max-width: 70%;
+    margin: 0 auto;
   }
-  .main-container .container, .main-container .address-container {
+  .main-container .container, .main-container .address-container,
+.main-container .container-filled {
     flex: 1;
   }
 }
@@ -316,6 +345,10 @@ section > h2 {
   margin: 1rem 0;
 }
 
+section#contact h2 {
+  padding-top: 2rem;
+}
+
 address a,
 address p {
   color: #d5d2d2;
@@ -330,6 +363,7 @@ address p {
   padding-top: 2rem;
   background-color: #2e2d2d;
   padding-bottom: 2rem;
+  border-top: solid 1px #434343;
 }
 
 footer {

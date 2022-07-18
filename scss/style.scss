@@ -79,7 +79,7 @@ p {
   @media screen and (min-width: $desktop_breakpoint) {
     background-image: url("/images/people-meeting-large-bw.jpg");
     background-size: cover;
-    background-position: bottom right;
+    background-position: center left;
     justify-content: flex-end;
     padding-right: 10%;
   }
@@ -103,12 +103,16 @@ section > h2 {
     display: flex;
     align-items: flex-start;
     gap: $spacing;
-    .container {
+    max-width: 70%;
+    margin: 0 auto;
+    .container,
+    .container-filled {
       flex: 1;
     }
   }
 }
 .container-filled {
+  @extend .container;
   padding: $spacing * 2 $spacing;
   background-color: $container-background;
 }
@@ -138,6 +142,10 @@ section > h2 {
   margin: $spacing 0;
 }
 
+section#contact h2 {
+  padding-top: calc($spacing * 2);
+}
+
 address {
   a,
   p {
@@ -154,6 +162,7 @@ address {
   padding-top: calc($spacing * 2);
   background-color: $form-background;
   padding-bottom: calc($spacing * 2);
+  border-top: solid 1px $primary-background;
 }
 
 footer {

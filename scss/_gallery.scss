@@ -4,12 +4,19 @@
   margin: $spacing * 2 0;
   overflow-x: scroll;
   padding: $spacing;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    justify-content: center;
+    gap: calc($spacing * 4);
+    overflow-x: auto;
+  }
 }
 
 .member-info {
   background-color: $container-background;
   border-radius: $border-radius-size;
   padding-bottom: $spacing;
+  width: 150px;
   span {
     display: block;
     margin: $spacing/2 $spacing;
