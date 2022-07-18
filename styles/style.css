@@ -242,13 +242,6 @@ p {
   background-size: cover;
   margin-bottom: 2rem;
 }
-.hero-section div {
-  padding: 60% 1rem;
-  background-color: rgba(46, 46, 46, 0.6);
-  border-radius: 5px;
-  height: 100%;
-  width: 100%;
-}
 .hero-section a {
   font-weight: bold;
   color: #d5d2d2;
@@ -261,6 +254,15 @@ p {
 }
 .hero-section a:visited {
   color: inherit;
+}
+@media screen and (min-width: 900px) {
+  .hero-section {
+    background-image: url("/images/people-meeting-large-bw.jpg");
+    background-size: cover;
+    background-position: bottom right;
+    justify-content: flex-end;
+    padding-right: 10%;
+  }
 }
 
 section > h2 {
